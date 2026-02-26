@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@drawable/cookbg1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:src="@drawable/rvbg"
+
+        android:layout_gravity="center"/>
+
+
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:layout_width="200dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:text="Popolar Food"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:text="view all" />
+
+        </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:weightSum="6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30sp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/chicken"
+                    android:text="Ramen" />
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/cburger"
+                    android:text="Sushi" />
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/pasta"
+                    android:text="Rolls" />
+
+               <ImageView
+                   android:layout_weight="1"
+                   android:layout_width="100dp"
+                   android:layout_height="100dp"
+                   android:src="@drawable/fries"/>
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/cinnoman"/>
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/cocoplate"/>
+
+                <ImageView
+                    android:layout_weight="1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/pasta"/>
+            </LinearLayout>
+    </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="30sp"
+            android:background="@drawable/darkmenubgfood"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discount 50%"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Explore more"
+                android:textColor="#EEE"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_view"
+        android:layout_width="wrap_content"
+        android:layout_height="280dp"
+        android:layout_gravity="center"
+        android:layout_margin="4dp" />
+
+    <RelativeLayout
+         android:id="@+id/bottom_toolbar_root"
+         android:layout_width="match_parent"
+         android:layout_height="70dp"
+        android:background="#80FFFFFF"
+         android:paddingStart="12dp">
+
+
+
+     <LinearLayout
+             android:id="@+id/bottom_nav_container"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_centerInParent="true"
+             android:gravity="center"
+             android:orientation="horizontal"
+             android:weightSum="10">
+
+
+             <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight="2"
+                 android:gravity="center"
+                 android:orientation="vertical">
+
+                 <ImageButton
+                     android:id="@+id/btn_home"
+                     android:layout_width="50dp"
+                     android:layout_height="50dp"
+                     android:background="?attr/selectableItemBackgroundBorderless"
+                     android:contentDescription="Home"
+                     android:scaleType="centerInside"
+                     android:src="@drawable/home"/>
+
+             </LinearLayout>
+
+
+             <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight="2"
+                 android:gravity="center"
+                 android:orientation="vertical">
+
+                 <ImageButton
+                     android:id="@+id/btn_explore"
+                     android:layout_width="50dp"
+                     android:layout_height="50dp"
+                     android:contentDescription="Search"
+                     android:background="?attr/selectableItemBackgroundBorderless"
+                     android:src="@drawable/searche" />
+
+             </LinearLayout>
+
+
+             <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight="2"
+                 android:gravity="center"
+                 android:orientation="vertical">
+
+                 <ImageButton
+                     android:id="@+id/btn_orders"
+                     android:layout_width="50dp"
+                     android:layout_height="50dp"
+                     android:background="?attr/selectableItemBackgroundBorderless"
+                     android:contentDescription="Cart"
+                     android:src="@drawable/order" />
+
+
+             </LinearLayout>
+
+
+             <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight="2"
+                 android:foreground="?attr/selectableItemBackgroundBorderless"
+                 android:orientation="vertical"
+                 android:paddingTop="6dp"
+                 android:paddingBottom="6dp">
+
+
+                 <ImageButton
+                     android:id="@+id/btn_cart"
+                     android:layout_width="50dp"
+                     android:layout_height="50dp"
+                     android:background="?attr/selectableItemBackgroundBorderless"
+                     android:contentDescription="carting5"
+                     android:src="@drawable/shopping" />
+
+
+             </LinearLayout>
+
+             <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:layout_weight="2"
+                 android:gravity="center"
+                 android:orientation="vertical">
+
+                 <ImageButton
+                     android:id="@+id/btn_profile"
+                     android:layout_width="50dp"
+                     android:layout_height="50dp"
+                     android:background="?attr/selectableItemBackgroundBorderless"
+                     android:contentDescription="user"
+                     android:scaleType="centerInside"
+                     android:src="@drawable/profile" />
+
+             </LinearLayout>
+
+         </LinearLayout>
+
+     </RelativeLayout>
+
+</LinearLayout>

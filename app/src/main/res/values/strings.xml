@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="popular_food" />
+    <string name="view_all" />
+    <string name="orders" />
+    <string name="carting" />
+    <string name="cart1" />
+    <string name="user" />
+    <string name="profile" />
+    <string name="carting1" />
+</resources>
